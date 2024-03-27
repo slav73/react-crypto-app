@@ -66,10 +66,13 @@ export default function AppHeader() {
       <CoinInfoModal coin={coin} />
     </Modal>
 
-    <Drawer title="Add Asset" onClose={() => setDrawer(false)} open={drawer}>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
+    <Drawer
+      width={600}
+      title="Add Asset"
+      destroyOnClose
+      onClose={() => setDrawer(false)} open={drawer}
+    >
+      <AddAssetForm onClose={() => setDrawer(false)} />
     </Drawer>
   </Layout.Header>)
 }
